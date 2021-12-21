@@ -121,7 +121,7 @@ if(!isset($_SESSION["username"]))
 	</div>
   <!-- Ερώτημα στην βάση δεδομένων να φέρει τις αγγελίες ακινητων του συγκεκριμένου user-->
 <?php
-  if ($results = mysqli_query($data, "SELECT a.id,a.area,a.price,a.availability,a.tetragonika FROM user u, aggelia a Where u.id=a.uid")) {
+  if ($results = mysqli_query($data, "SELECT a.id,a.area,a.price,a.availability,a.tetragonika FROM user u, aggelia a Where u.id=a.uid AND u.id=".$_SESSION["id"])) {
   echo "Ο χρήστης έχει: " . mysqli_num_rows($results)." αγγελίες";
   ?>
 

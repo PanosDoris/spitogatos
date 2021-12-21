@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 21 Δεκ 2021 στις 12:34:51
+-- Χρόνος δημιουργίας: 21 Δεκ 2021 στις 13:45:54
 -- Έκδοση διακομιστή: 10.4.14-MariaDB
 -- Έκδοση PHP: 7.3.23
 
@@ -41,7 +41,8 @@ CREATE TABLE `aggelia` (
 --
 
 INSERT INTO `aggelia` (`id`, `uid`, `price`, `area`, `availability`, `tetragonika`) VALUES
-(24, 2, 677, 'Αθήνα', 'ενοικίαση', 765);
+(24, 2, 677, 'Αθήνα', 'ενοικίαση', 765),
+(26, 3, 600, 'Πάτρα', 'πώληση', 567);
 
 -- --------------------------------------------------------
 
@@ -63,7 +64,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`, `usertype`, `status`) VALUES
 (1, 'admin', '12345', 'admin', 1),
-(2, 'user1', '54321', 'user', 1);
+(2, 'user1', '54321', 'user', 1),
+(3, 'user2', '112233', 'user', 1),
+(4, 'user3', '55555', 'user', 1);
 
 --
 -- Ευρετήρια για άχρηστους πίνακες
@@ -90,13 +93,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT για πίνακα `aggelia`
 --
 ALTER TABLE `aggelia`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT για πίνακα `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Περιορισμοί για άχρηστους πίνακες
